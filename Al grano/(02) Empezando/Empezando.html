@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://es.discovermeteor.com/chapters/getting-started/ -->
+<html class="no-js wf-klavikaweb-n3-active wf-klavikaweb-n6-active wf-sourcesanspro-n4-active wf-sourcesanspro-n7-active wf-sourcesanspro-i7-active wf-sourcesanspro-i4-active wf-sourcesanspro-n3-active wf-sourcesanspro-i3-active wf-sourcecodepro-n7-active wf-sourcecodepro-n4-active wf-active" lang="es"><!-- <![endif] --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Empezando - Descubriendo Meteor</title>
+    <!-- Included CSS Files -->
+    <link href="./Empezando_files/screen.css" rel="stylesheet">
+    <link href="./Empezando_files/print.css" media="print" rel="stylesheet">
+    <!-- %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic", :rel => "stylesheet"} -->
+    <!-- %link{:href => "http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700", :rel => "stylesheet"} -->
+    <link href="http://es.discovermeteor.com/images/favicon.ico" rel="shortcut icon">
+    <script async="" src="./Empezando_files/analytics.js.descarga"></script><script src="./Empezando_files/jquery.min.js.descarga"></script><style type="text/css">
+:root .adsbox
+{ display: none !important; }</style>
+    <script src="./Empezando_files/rcr2ohz.js.descarga"></script>
+    <style type="text/css">.tk-klavika-web{font-family:"klavika-web",sans-serif;}.tk-source-sans-pro{font-family:"source-sans-pro",sans-serif;}.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script>
+      try{Typekit.load();}catch(e){}
+    </script>
+  <script type="text/javascript" async="" src="./Empezando_files/embed.js.descarga"></script><script async="" type="text/javascript" src="./Empezando_files/count.js.descarga"></script><style type="text/css">
+:root *[pp99spf][hidden] { display: none !important; }</style><script src="./Empezando_files/count-data.js.descarga"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.2d848eddee1b8c12749b72a04b2b33dc.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.845ead53749f15d0bd8a5ee344c8f06e.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.8241ae5fc761eb94635acdc63f5fd29f.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./Empezando_files/alfie.f51946af45e0b561c60f768335c9eb79.js.descarga" async="" charset="UTF-8"></script></head>
+  <body style="zoom: 1;" cz-shortcut-listen="true">
+    <header>
+      <h1>
+        <a href="http://es.discovermeteor.com/">
+          <span>Descubriendo</span>
+          <strong>Meteor</strong>
+        </a>
+      </h1>
+    </header>
+    <div class="main">
+      <div class="row">
+        <div class="toc sidebar">
+          <a class="sidebar-toggle" href="javascript:void(0)">Toggle Table of Contents</a>
+          <div class="sidebar-inner">
+            <ul>
+              <li>
+                <span class="number">
+                  1
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/introduction/">
+                  Introducción
+                </a>
+              </li>
+              <li class="active">
+                <span class="number">
+                  2
+                </span>
+                <a href="#">
+                  Empezando
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  2.5
+                </span>
+                <a href="../(03) Plantillas/Plantillas.html">
+                  Despliegue
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  3
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/templates/">
+                  Plantillas
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  3.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/github/">
+                  Usando Git y GitHub
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  4
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/collections/">
+                  Colecciones
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  4.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/publications-and-subscriptions/">
+                  Publicaciones y suscripciones
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/routing/">
+                  Enrutando
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  5.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/the-session/">
+                  La sesión
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  6
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/adding-users/">
+                  Añadiendo usuarios
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  6.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/reactivity/">
+                  Reactividad
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  7
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/creating-posts/">
+                  Creando posts
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  7.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/latency-compensation/">
+                  Compensación de la latencia
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  8
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/editing-posts/">
+                  Editando posts
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  8.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/allow-and-deny/">
+                  Permitir y Denegar
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  9
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/errors/">
+                  Errores
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  9.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/creating-a-meteor-package/">
+                  Creando un paquete Meteor
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  10
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/comments/">
+                  Comentarios
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  10.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/denormalization/">
+                  Denormalización
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  11
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/notifications/">
+                  Notificaciones
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  11.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/advanced-reactivity/">
+                  Reactividad avanzada
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  12
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/pagination/">
+                  Paginación
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  13
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/voting/">
+                  Votos
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  13.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/advanced-publications/">
+                  Publicaciones avanzadas
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/animations/">
+                  Animaciones
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/going-further/">
+                  Ir más lejos
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/meteor-vocabulary/">
+                  Vocabulario
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  99
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/changelog/">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="vocabulary sidebar">
+          <a class="sidebar-toggle" href="http://es.discovermeteor.com/chapters/getting-started/#">Toggle Vocabulary</a>
+          <div class="sidebar-inner">
+            <div class="sidebar-content">
+              <h3>Vocabulary</h3>
+              <h4>Cliente</h4>
+              
+              <p style="display: none;">Cuando hablamos del Cliente, nos referimos al código que se ejecuta en el navegador de los usuarios, ya sea uno tradicional, como Firefox o Safari, o algo tan complejo como un UIWebView en una aplicación nativa para el iPhone.</p>
+              
+              <h4>Colección</h4>
+              
+              <p style="display: none;">Una colección es el almacén de datos que se sincroniza automáticamente entre el cliente y el servidor. Las colecciones tienen un nombre (como <code>posts</code>), y por lo general existen tanto en el cliente como en el servidor. Si bien se comportan de forma distinta, tienen una API común basada en la API de Mongo.</p>
+              
+              <h4>Computación</h4>
+              
+              <p style="display: none;">Una computación es un bloque de código que se ejecuta cada vez que cambia una de las fuentes de datos reactivos de las que depende. Si tienes una fuente reactiva (por ejemplo, una variable de sesión) y quieres responder reactivamente a ella, tendrás que crear una computación.</p>
+              
+              <h4>Cursor</h4>
+              
+              <p style="display: none;">Un cursor es el resultado de ejecutar una consulta en una colección Mongo. En el lado del cliente, un cursor no es tan sólo un conjunto de resultados, sino que es un objeto <em>reactivo</em> desde el que se puede observar (con <code>observe()</code>) los cambios (añadir, eliminar o actualizar) en la colección correspondiente.</p>
+              
+              <h4>DDP</h4>
+              
+              <p style="display: none;">El DDP es el Protocolo de Datos Distribuidos que utiliza Meteor para sincronizar colecciones y efectuar llamadas a métodos. DDP pretende ser un protocolo genérico, que toma el relevo a HTTP para aplicaciones en tiempo real con gran carga de datos.</p>
+              
+              <h4>Deps</h4>
+              
+              <p style="display: none;">Deps es el sistema reactivo de Meteor. Deps se utiliza entre bastidores para sincronizar automáticamente el  HTML con el modelo de datos subyacente.</p>
+              
+              <h4>Documento</h4>
+              
+              <p style="display: none;">Mongo es un almacén de datos basado en documentos y a los objetos que salen de las colecciones se les llama “documentos”. Son objetos JavaScript sin formato (aunque no pueden contener funciones) con una única propiedad especial, el ’_id’, que Meteor utiliza para realizar un seguimiento de sus propiedades en el DDP.</p>
+              
+              <h4>Ayudantes</h4>
+              
+              <p style="display: none;">Cuando una plantilla necesita mostrar cosas más complejas que una simple propiedad de un documento, ésta puede hacer uso de su ayudante, una función que se utiliza para procesar los datos que se muestran en ella.</p>
+              
+              <h4>Compensación de la latencia</h4>
+              
+              <p style="display: none;">Es una técnica que permite simular llamadas a métodos en el cliente para evitar retrasos mientras se espera la respuesta del servidor.</p>
+              
+              <h4>Meteor Development Group (MDG)</h4>
+              
+              <p style="display: none;">La empresa que desarrolla Meteor.</p>
+              
+              <h4>Método</h4>
+              
+              <p style="display: none;">Un método en Meteor es una llamada desde el cliente, a un procedimiento remoto en el servidor, con un poco de lógica añadida que permite realizar un seguimiento de los cambios en los datos además de compensar la latencia de la llamada.</p>
+              
+              <h4>MiniMongo</h4>
+              
+              <p style="display: none;">La colección del lado del cliente es un almacén de datos en memoria que ofrece una API tipo Mongo. La librería que se utiliza se llama “MiniMongo”, para indicar que es una versión más pequeña de Mongo que se ejecuta por completo en la memoria del navegador.</p>
+              
+              <h4>Paquete</h4>
+              
+              <p style="display: none;">Un paquete Meteor puede ser: código JavaScript que se ejecuta en el servidor, código JavaScript que se ejecuta en el cliente, instrucciones para procesar recursos (como SASS a CSS), o recursos que deben ser  procesados​​. <br> Un paquete es como una librería con superpoderes. Meteor incluye una gran cantidad de paquetes (<code>meteor list</code>). También existe <a href="http://atmosphere.meteor.com/">Atmosphere</a>, que es una colección de paquetes de terceros mantenida por la comunidad (<code>mrt add ...</code>).</p>
+              
+              <h4>Publicación</h4>
+              
+              <p style="display: none;">Una publicación es un conjunto de datos con nombre que se personaliza para cada usuario que se suscribe a ella. Se configuran en el servidor.</p>
+              
+              <h4>Servidor</h4>
+              
+              <p style="display: none;">El servidor Meteor es un servidor HTTP y DDP ejecutados vía Node.js. Se compone de todas las librerías y del código JavaScript del lado del servidor. Cuando se inicia el servidor, se conecta a una base de datos Mongo (que configura por si mismo en el primer arranque).</p>
+              
+              <h4>Sesión</h4>
+              
+              <p style="display: none;">La sesión en Meteor es una fuente de datos reactiva que usa tu aplicación para hacer un seguimiento del estado del usuario.</p>
+              
+              <h4>Suscripción</h4>
+              
+              <p style="display: none;">Una suscripción es una conexión a una publicación desde un cliente específico. La suscripción es el código que ejecuta el navegador y que utiliza para comunicarse con una publicación del servidor y que, además, mantiene los datos sincronizados.</p>
+              
+              <h4>Plantilla</h4>
+              
+              <p style="display: none;">Una plantilla es una forma de generar código HTML desde JavaScript. Por defecto, Meteor sólo soporta el sistema Spacebars, pero hay planes para incluir más.</p>
+              
+              <h4>Contexto de datos de una plantilla</h4>
+              
+              <p style="display: none;">Cuando se muestra un plantilla, lo que se representa es un objeto JavaScript que proporciona datos específicos para esta representación en particular. Por lo general, este tipo de objetos son, de tipo POJO (plain-old-JavaScript-objects), a menudo son documentos de una colección, aunque pueden ser más complejos e incluir funciones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="top-nav">
+            <div class="post-nav">
+              <a class="prev" href="http://es.discovermeteor.com/chapters/introduction/" title="Previous Post: Introducción">
+                «
+                Introducción
+              </a>
+              <a class="next" href="http://es.discovermeteor.com/chapters/deploying/" title="next Post: Despliegue">
+                Despliegue
+                »
+              </a>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="chapter-heading">
+              <h2 class="chapter-title">Empezando</h2>
+              <span class="chapter-number">2</span>
+            </div>
+            <input id="paragraphs" type="hidden" value="49">
+            <div class="chapter-summary note chapter">
+				<a href="#men" style="position:fixed;bottom:0px;left:0px;margin:2px;padding:2px 7px;background-color:rgba(64, 64, 64, 0.2);border-radius:50%;box-shadow:0px 0px 5px rgba(0, 0, 0, 0.4);">▲</a>
+              <h3 id="men">En este capítulo:</h3>
+              <ul>
+				  <li><a href="#men-i">Instalación.</a></li>
+				  <li><a href="#men-cusa">Creando una simple aplicación.</a></li>
+				  <li><a href="#men-aup">Añadir un paquete.</a></li>
+				  <li><a href="#men-leduam">La estructura de una aplicación Meteor.</a></li>
+				  <li><a href="#men-ecdna">El CSS de nuestra aplicación.</a></li>
+			  </ul>
+            </div>
+            
+			<h3 id="men-i">Instalación</h3>
+			
+            <p>Mac OS o GNU/Linux por consola:</p>
+            
+			<pre><span class="kd browser-prompt">></span> <span class="kd">curl</span> https://install.meteor.com <span class="kd">|</span> sh</pre>
+			
+			<div class="caption">Terminal</div>
+			
+            <p>Windows, guia oficial de instalación: <a href="https://www.meteor.com/install" target="_blank">install instructions</a> en la web de Meteor. </p>
+            
+            <h3 id="men-cusa">Creando una simple aplicación</h3>
+            
+            <p>Ahora podremos usar el comando <code class="kd">meteor</code> para crear nuestra primera app:</p>
+            
+			<pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> create microscopio</span></pre>
+            
+			<div class="caption">Terminal</div>
+			
+            <p>Se creará una carpeta con el nombre de nuestra aplicación: <code>/microscopio</code></p>
+            
+			<p>Ya podemos entrar en nuestra aplicación y levantar nuestra aplicación con el siguiente comando:</p>
+            
+			<pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">cd</span> microscopio</span><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span></span></pre>
+
+			<div class="caption">Terminal</div>
+            
+            <p>Ahora abrimos <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> en el navegador:</p>
+			
+            <figure class="screenshot "><img src="./Empezando_files/2-1.png" alt="Hello World de Meteor"><figcaption>Hello World de Meteor</figcaption></figure>
+            
+            <p>Puedes parar la aplicación pulsando <code>Ctrl + C</code>.</p>
+            
+            <h3 id="men-aup">Añadir un paquete</h3>
+            
+            <p>Usaremos <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a>  y <a href="http://underscorejs.org/" target="_blank">Underscore</a> en nuestro proyecto</p>
+			
+			<pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> add twbs:bootstrap</span><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> add underscore</span></pre>
+			
+			<div class="caption">Terminal</div>
+            
+            <p>Deberías notar un cambio en el aspecto de nuestra aplicación:</p>
+            
+            <figure class="screenshot "><img src="./Empezando_files/2-1b.png" alt="Con Bootstrap."><figcaption>Con Bootstrap.</figcaption></figure>
+            
+            <h3 id="men-leduam">La estructura de una aplicación Meteor</h3>
+            
+            <p>Estructuraremos un aplicación limpia desde el inicio. Entra en la carpeta <code>/client</code> y borra los archivos <code>main.css</code>, <code>main.html</code> y <code>main.js</code>. Borra también el archivo <code>main.js</code> de la carpeta <code>/server</code>.</p>
+			
+            <p>A continuación, crea dos directorios dentro de <code>/microscopio</code>: <code>/lib</code> y <code>/public</code>.</p>
+            
+            <p>Ahora, crearemos dos archivos vacíos <code>main.html</code> y <code>main.js</code> dentro de <code>/client</code>.</p>
+			
+			<p>Dentro del projecto deberías tener:</p>
+			
+			<pre><span class="line"><span class="kd">/</span>client</span><span class="line">    main.html</span><span class="line">    main.js</span><span class="line"><span class="kd">/</span>lib</span><span class="line"><span class="kd">/</span>public</span><span class="line"><span class="kd">/</span>server</span></pre>
+            <div class="caption">Sistema de carpetas</div>
+			
+			<h3 id="men-ecdna">El CSS de nuestra aplicación</h3>
+            
+            <p>Evitaremos hablar de CSS todo lo que sea necesario por lo que se añadirá todo el CSS desde el inicio. Guarda el archivo en <code>/client/estilos/estilo.css</code>.</p>
+			
+			<style>.or{color:#ff9700;}</style>
+			<pre><span class="line">.<span class="s1">grid-block</span>,</span><span class="line">.<span class="s1">main</span>,</span><span class="line">.<span class="s1">publicacion</span>,</span><span class="line">.<span class="s1">comentarios</span> li,</span><span class="line">.<span class="s1">comentario-form</span>{<span class="na">margin-bottom</span>:<span class="nb">10</span>px;<span class="na">padding</span>:<span class="nb">10</span>px;<span class="na">border-radius</span>:<span class="nb">3</span>px;<span class="kd na">-webkit-box-shadow</span>:<span class="nb">0</span>px <span class="nb">1</span>px <span class="nb">1</span>px rgba(<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0.15</span>);<span class="kd na">-moz-box-shadow</span>:<span class="nb">0</span>px <span class="nb">1</span>px <span class="nb">1</span>px rgba(<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0.15</span>);<span class="na">box-shadow</span>:<span class="nb">0</span>px <span class="nb">1</span>px <span class="nb">1</span>px rgba(<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0.15</span>);<span class="na">background</span>:#FFFFFF;}</span><span class="line">body{<span class="na">color</span>:#666666;<span class="na">background</span>:#EEEEEE;}</span><span class="line">#<span class="nb">main</span>{<span class="na">position</span>:relative;}</span><span class="line">.<span class="s1">pagina</span>{<span class="na">position</span>:absolute;<span class="na">top</span>:<span class="nb">0</span>px;<span class="na">width</span>:<span class="nb">100</span>%;}</span><span class="line">.<span class="s1">navbar</span>{<span class="na">margin-bottom</span>:<span class="nb">10</span>px;}</span><span class="line">.<span class="s1">navbar</span> .<span class="s1">navbar-inner</span>{<span class="na">border-radius</span>:<span class="nb">0</span>px <span class="nb">0</span>px <span class="nb">3</span>px <span class="nb">3</span>px;}</span><span class="line">#<span class="nb">spinner</span>{<span class="na">height</span>:<span class="nb">300</span>px;}</span><span class="line">.<span class="s1">publicacion</span>{<span class="na">position</span>:relative;<span class="na">opacity</span>:<span class="nb">1</span>;<span class="kd na">*zoom</span>:<span class="nb">1</span>;}</span><span class="line">.<span class="s1">publicacion</span>:<span class="or">before</span>,.<span class="s1">publicacion</span>:<span class="or">after</span>{<span class="na">content</span>:<span class="c1">""</span>;<span class="na">display</span>:table;}</span><span class="line">.<span class="s1">publicacion</span>:<span class="or">after</span>{<span class="na">clear</span>:both;}</span><span class="line">.<span class="s1">publicacion</span>.<span class="s1">invisible</span>{<span class="na">opacity</span>:<span class="nb">0</span>;}</span><span class="line">.<span class="s1">publicacion</span>.<span class="s1">instant</span>{<span class="kd na">-webkit-transition</span>:none;<span class="kd na">-moz-transition</span>:none;<span class="kd na">-o-transition</span>:none;<span class="na">transition</span>:none;}</span><span class="line">.<span class="s1">publicacion</span>.<span class="s1">animate</span>{<span class="kd na">-webkit-transition</span>:all <span class="nb">300</span>ms <span class="nb">0</span>ms;<span class="kd na">-moz-transition</span>:all <span class="nb">300</span>ms <span class="nb">0</span>ms ease-in;<span class="kd na">-o-transition</span>:all <span class="nb">300</span>ms <span class="nb">0</span>ms ease-in;<span class="na">transition</span>:all <span class="nb">300</span>ms <span class="nb">0</span>ms ease-in;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">upvote</span>{<span class="na">float</span>:left;<span class="na">margin</span>:<span class="nb">7</span>px <span class="nb">12</span>px <span class="nb">0</span>px <span class="nb">0</span>px;<span class="na">display</span>:block;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">publicacion-contenido</span>{<span class="na">float</span>:left;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">publicacion-contenido</span> h3{<span class="na">margin</span>:<span class="nb">0</span>px;<span class="na">line-height</span>:<span class="nb">1.4</span>;<span class="na">font-size</span>:<span class="nb">18</span>px;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">publicacion-contenido</span> h3 a{<span class="na">margin-right</span>:<span class="nb">5</span>px;<span class="na">display</span>:inline-block;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">publicacion-contenido</span> h3 span{<span class="na">color</span>:#AAAAAA;<span class="na">display</span>:inline-block;<span class="na">font-size</span>:<span class="nb">14</span>px;<span class="na">font-weight</span>:normal;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">publicacion-contenido</span> p{<span class="na">margin</span>:<span class="nb">0</span>;}</span><span class="line">.<span class="s1">publicacion</span> .<span class="s1">debatir</span>{<span class="na">float</span>:right;<span class="na">margin-top</span>:<span class="nb">7</span>px;<span class="na">display</span>:block;}</span><span class="line">.<span class="s1">comentarios</span>{<span class="na">margin</span>:<span class="nb">0</span>px;<span class="na">list-style-type</span>:none;}</span><span class="line">.<span class="s1">comentarios</span> li h4{<span class="na">margin</span>:<span class="nb">0</span>px;<span class="na">font-size</span>:<span class="nb">16</span>px;}</span><span class="line">.<span class="s1">comentarios</span> li h4 .<span class="s1">autor</span>{<span class="na">font-weight</span>:bold;}</span><span class="line">.<span class="s1">comentarios</span> li h4 .<span class="s1">fecha</span>{<span class="na">font-size</span>:<span class="nb">12</span>px;<span class="na">font-weight</span>:normal;}</span><span class="line">.<span class="s1">comentarios</span> li h4 a{<span class="na">font-size</span>:<span class="nb">12</span>px;}</span><span class="line">.<span class="s1">comentarios</span> li p:<span class="or">last-child</span>{<span class="na">margin-bottom</span>:<span class="nb">0</span>;}</span><span class="line">.<span class="s1">dropdown-menu</span> span{<span class="na">padding</span>:<span class="nb">3</span>px <span class="nb">20</span>px;<span class="na">color</span>:#BBBBBB;<span class="na">display</span>:block;<span class="na">line-height</span>:<span class="nb">20</span>px;<span class="na">white-space</span>:nowrap;<span class="na">clear</span>:both;}</span><span class="line">.<span class="s1">cargar-mas</span>{<span class="na">height</span>:<span class="nb">60</span>px;<span class="na">margin-bottom</span>:<span class="nb">10</span>px;<span class="na">border-radius</span>:<span class="nb">3</span>px;<span class="na">background</span>:rgba(<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0.05</span>);<span class="na">text-align</span>:center;<span class="na">line-height</span>:<span class="nb">60</span>px;<span class="na">display</span>:block;}</span><span class="line">.<span class="s1">cargar-mas</span>:<span class="or">hover</span>{<span class="na">text-decoration</span>:none;<span class="na">background</span>:rgba(<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0</span>,<span class="nb">0.1</span>);}</span><span class="line">.<span class="s1">publicaciones</span> .<span class="s1">spinner-container</span>{<span class="na">position</span>:relative;<span class="na">height</span>:<span class="nb">100</span>px;}</span><span class="line">.<span class="s1">jumbotron</span>{<span class="na">text-align</span>:center;<span class="na">text-shadow</span>:<span class="nb">3</span>px <span class="nb">2</span>px <span class="nb">2</span>px white;}</span><span class="line">.<span class="s1">jumbotron</span> h2{<span class="na">font-size</span>:<span class="nb">60</span>px;<span class="na">font-weight</span>:<span class="nb">100</span>;}</span><span class="line">.<span class="s1">errores</span>{<span class="na">position</span>:fixed;<span class="na">z-index</span>:<span class="nb">10000</span>;<span class="na">padding</span>:<span class="nb">10</span>px;<span class="na">top</span>:<span class="nb">0</span>px;<span class="na">left</span>:<span class="nb">0</span>px;<span class="na">right</span>:<span class="nb">0</span>px;<span class="na">bottom</span>:<span class="nb">0</span>px;<span class="na">pointer-events</span>:none;}</span><span class="line">.<span class="s1">alert</span>{<span class="na">width</span>:<span class="nb">250</span>px;<span class="na">float</span>:right;<span class="na">clear</span>:both;<span class="na">margin-bottom</span>:<span class="nb">5</span>px;<span class="na">pointer-events</span>:auto;<span class="na">transition</span>: ease <span class="nb">1</span>s opacity;}</span><span class="line">p.<span class="s1">solo-autor</span>{ <span class="nb">font-size</span>: <span class="nb">1.2</span>em; }</span><span class="line">.<span class="s1">negrita</span>{ <span class="na">font-weight</span>: bold; }</span><span class="line">h3 a{<span class="na">font-weight</span>:bold; <span class="na">color</span>:#0086CD;}</span></pre>
+			<div class="caption">/client/estilos/estilos.css</div>
+			
+          </div>
+          <div class="bottom-nav">
+            <div class="post-nav">
+              <a class="prev" href="#" title="Previous Post: Introducción">
+                «
+                Introducción
+              </a>
+              <a class="next" href="../(03) Plantillas/Plantillas.html" title="next Post: Despliegue">
+                Despliegue
+                »
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="comments sidebar">
+          <a class="sidebar-toggle" data-disqus-identifier="getting-started_es" href="http://es.discovermeteor.com/chapters/getting-started/#disqus_thread">1 Comment</a>
+          <div class="sidebar-inner">
+            <div class="issues">
+              <a class="issue-link simple-button" href="https://github.com/DiscoverMeteor/Microscope/issues" target="_blank">Reporta un problema con el código</a>
+              <a class="issue-link simple-button" href="https://github.com/DiscoverMeteor/DiscoverMeteor_es/issues" target="_blank">Reporta un problema con el libro</a>
+              <hr>
+              <p>O, comenta el contenido aquí:</p>
+            </div>
+            <div id="disqus_thread"><iframe id="dsq-app2057" name="dsq-app2057" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Empezando_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 449px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'discovermeteores'; // required: replace example with your forum shortname
+                var disqus_identifier = 'getting-started_es';
+            
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                }());
+            
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        © 2014 <a href="http://tom.thesnail.org/">Tom Coleman</a> y <a href="http://sachagreif.com/">Sacha Greif</a>
+      </div>
+    </footer>
+    <!-- %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"} -->
+    <script src="./Empezando_files/moment.min.js.descarga"></script>
+    <script src="./Empezando_files/es.js.descarga"></script>
+    <script src="./Empezando_files/script.js.descarga"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-38246482-5', 'discovermeteor.com');
+      ga('send', 'pageview');
+    </script>
+    <input id="lang" type="hidden" value="es">
+  
+
+<iframe style="display: none;" src="./Empezando_files/saved_resource(1).html"></iframe></body></html>

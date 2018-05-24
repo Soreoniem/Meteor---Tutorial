@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://es.discovermeteor.com/chapters/collections/ -->
+<html class="no-js wf-klavikaweb-n3-active wf-klavikaweb-n6-active wf-sourcesanspro-n4-active wf-sourcesanspro-n7-active wf-sourcesanspro-i7-active wf-sourcesanspro-i4-active wf-sourcesanspro-n3-active wf-sourcesanspro-i3-active wf-sourcecodepro-n7-active wf-sourcecodepro-n4-active wf-active" lang="es"><!-- <![endif] --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Colecciones - Descubriendo Meteor</title>
+    <!-- Included CSS Files -->
+    <link href="./Colecciones_files/screen.css" rel="stylesheet">
+    <link href="./Colecciones_files/print.css" media="print" rel="stylesheet">
+    <!-- %link{:href => "http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic", :rel => "stylesheet"} -->
+    <!-- %link{:href => "http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700", :rel => "stylesheet"} -->
+    <link href="http://es.discovermeteor.com/images/favicon.ico" rel="shortcut icon">
+    <script async="" src="./Colecciones_files/analytics.js.descarga"></script><script src="./Colecciones_files/jquery.min.js.descarga"></script><style type="text/css">
+:root .adsbox
+{ display: none !important; }</style>
+    <script src="./Colecciones_files/rcr2ohz.js.descarga"></script>
+    <style type="text/css">.tk-klavika-web{font-family:"klavika-web",sans-serif;}.tk-source-sans-pro{font-family:"source-sans-pro",sans-serif;}.tk-source-code-pro{font-family:"source-code-pro",sans-serif;}</style><style type="text/css">@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/5401fe/00000000000000003b9acdf2/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:klavika-web;src:url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/l?subset_id=2&fvd=n6&v=3) format("woff2"),url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/d?subset_id=2&fvd=n6&v=3) format("woff"),url(https://use.typekit.net/af/835e90/00000000000000003b9acdf6/27/a?subset_id=2&fvd=n6&v=3) format("opentype");font-weight:600;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/b0088d/00000000000000003b9acb59/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/c55ca5/00000000000000003b9acb5c/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/l?subset_id=2&fvd=i7&v=3) format("woff2"),url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/d?subset_id=2&fvd=i7&v=3) format("woff"),url(https://use.typekit.net/af/7e0c18/00000000000000003b9acb5d/27/a?subset_id=2&fvd=i7&v=3) format("opentype");font-weight:700;font-style:italic;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/l?subset_id=2&fvd=i4&v=3) format("woff2"),url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/d?subset_id=2&fvd=i4&v=3) format("woff"),url(https://use.typekit.net/af/c42064/00000000000000003b9acb58/27/a?subset_id=2&fvd=i4&v=3) format("opentype");font-weight:400;font-style:italic;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/b35fa2/00000000000000003b9acb56/27/a?subset_id=2&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:source-sans-pro;src:url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/l?subset_id=2&fvd=i3&v=3) format("woff2"),url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/d?subset_id=2&fvd=i3&v=3) format("woff"),url(https://use.typekit.net/af/a6c785/00000000000000003b9acb57/27/a?subset_id=2&fvd=i3&v=3) format("opentype");font-weight:300;font-style:italic;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/l?subset_id=2&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/d?subset_id=2&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/b8b49b/0000000000000000000179d5/27/a?subset_id=2&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:source-code-pro;src:url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/953e9e/0000000000000000000179cf/27/a?subset_id=2&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script>
+      try{Typekit.load();}catch(e){}
+    </script>
+  <script type="text/javascript" async="" src="./Colecciones_files/embed.js.descarga"></script><script async="" type="text/javascript" src="./Colecciones_files/count.js.descarga"></script><style type="text/css">
+:root *[airutoo][hidden] { display: none !important; }</style><script src="./Colecciones_files/count-data.js.descarga"></script><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.2d848eddee1b8c12749b72a04b2b33dc.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.845ead53749f15d0bd8a5ee344c8f06e.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.8241ae5fc761eb94635acdc63f5fd29f.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script src="./Colecciones_files/alfie.f51946af45e0b561c60f768335c9eb79.js.descarga" async="" charset="UTF-8"></script></head>
+  <body style="zoom: 1;" cz-shortcut-listen="true">
+    <header>
+      <h1>
+        <a href="http://es.discovermeteor.com/">
+          <span>Descubriendo</span>
+          <strong>Meteor</strong>
+        </a>
+      </h1>
+    </header>
+    <div class="main">
+      <div class="row">
+        <div class="toc sidebar">
+          <a class="sidebar-toggle" href="javascript:void(0)">Toggle Table of Contents</a>
+          <div class="sidebar-inner">
+            <ul>
+              <li>
+                <span class="number">
+                  1
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/introduction/">
+                  Introducción
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  2
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/getting-started/">
+                  Empezando
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  2.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/deploying/">
+                  Despliegue
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  3
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/templates/">
+                  Plantillas
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  3.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/github/">
+                  Usando Git y GitHub
+                </a>
+              </li>
+              <li class="active">
+                <span class="number">
+                  4
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/collections/">
+                  Colecciones
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  4.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/publications-and-subscriptions/">
+                  Publicaciones y suscripciones
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/routing/">
+                  Enrutando
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  5.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/the-session/">
+                  La sesión
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  6
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/adding-users/">
+                  Añadiendo usuarios
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  6.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/reactivity/">
+                  Reactividad
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  7
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/creating-posts/">
+                  Creando posts
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  7.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/latency-compensation/">
+                  Compensación de la latencia
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  8
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/editing-posts/">
+                  Editando posts
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  8.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/allow-and-deny/">
+                  Permitir y Denegar
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  9
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/errors/">
+                  Errores
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  9.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/creating-a-meteor-package/">
+                  Creando un paquete Meteor
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  10
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/comments/">
+                  Comentarios
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  10.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/denormalization/">
+                  Denormalización
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  11
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/notifications/">
+                  Notificaciones
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  11.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/advanced-reactivity/">
+                  Reactividad avanzada
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  12
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/pagination/">
+                  Paginación
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  13
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/voting/">
+                  Votos
+                </a>
+              </li>
+              <li class="sidebar-chapter">
+                <span class="number">
+                  13.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/advanced-publications/">
+                  Publicaciones avanzadas
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/animations/">
+                  Animaciones
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/going-further/">
+                  Ir más lejos
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  14.5
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/meteor-vocabulary/">
+                  Vocabulario
+                </a>
+              </li>
+              <li>
+                <span class="number">
+                  99
+                </span>
+                <a href="http://es.discovermeteor.com/chapters/changelog/">
+                  Changelog
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="vocabulary sidebar">
+          <a class="sidebar-toggle" href="http://es.discovermeteor.com/chapters/collections/#">Toggle Vocabulary</a>
+          <div class="sidebar-inner">
+            <div class="sidebar-content">
+              <h3>Vocabulary</h3>
+              <h4>Cliente</h4>
+              
+              <p style="display: none;">Cuando hablamos del Cliente, nos referimos al código que se ejecuta en el navegador de los usuarios, ya sea uno tradicional, como Firefox o Safari, o algo tan complejo como un UIWebView en una aplicación nativa para el iPhone.</p>
+              
+              <h4>Colección</h4>
+              
+              <p style="display: none;">Una colección es el almacén de datos que se sincroniza automáticamente entre el cliente y el servidor. Las colecciones tienen un nombre (como <code>posts</code>), y por lo general existen tanto en el cliente como en el servidor. Si bien se comportan de forma distinta, tienen una API común basada en la API de Mongo.</p>
+              
+              <h4>Computación</h4>
+              
+              <p style="display: none;">Una computación es un bloque de código que se ejecuta cada vez que cambia una de las fuentes de datos reactivos de las que depende. Si tienes una fuente reactiva (por ejemplo, una variable de sesión) y quieres responder reactivamente a ella, tendrás que crear una computación.</p>
+              
+              <h4>Cursor</h4>
+              
+              <p style="display: none;">Un cursor es el resultado de ejecutar una consulta en una colección Mongo. En el lado del cliente, un cursor no es tan sólo un conjunto de resultados, sino que es un objeto <em>reactivo</em> desde el que se puede observar (con <code>observe()</code>) los cambios (añadir, eliminar o actualizar) en la colección correspondiente.</p>
+              
+              <h4>DDP</h4>
+              
+              <p style="display: none;">El DDP es el Protocolo de Datos Distribuidos que utiliza Meteor para sincronizar colecciones y efectuar llamadas a métodos. DDP pretende ser un protocolo genérico, que toma el relevo a HTTP para aplicaciones en tiempo real con gran carga de datos.</p>
+              
+              <h4>Deps</h4>
+              
+              <p style="display: none;">Deps es el sistema reactivo de Meteor. Deps se utiliza entre bastidores para sincronizar automáticamente el  HTML con el modelo de datos subyacente.</p>
+              
+              <h4>Documento</h4>
+              
+              <p style="display: none;">Mongo es un almacén de datos basado en documentos y a los objetos que salen de las colecciones se les llama “documentos”. Son objetos JavaScript sin formato (aunque no pueden contener funciones) con una única propiedad especial, el ’_id’, que Meteor utiliza para realizar un seguimiento de sus propiedades en el DDP.</p>
+              
+              <h4>Ayudantes</h4>
+              
+              <p style="display: none;">Cuando una plantilla necesita mostrar cosas más complejas que una simple propiedad de un documento, ésta puede hacer uso de su ayudante, una función que se utiliza para procesar los datos que se muestran en ella.</p>
+              
+              <h4>Compensación de la latencia</h4>
+              
+              <p style="display: none;">Es una técnica que permite simular llamadas a métodos en el cliente para evitar retrasos mientras se espera la respuesta del servidor.</p>
+              
+              <h4>Meteor Development Group (MDG)</h4>
+              
+              <p style="display: none;">La empresa que desarrolla Meteor.</p>
+              
+              <h4>Método</h4>
+              
+              <p style="display: none;">Un método en Meteor es una llamada desde el cliente, a un procedimiento remoto en el servidor, con un poco de lógica añadida que permite realizar un seguimiento de los cambios en los datos además de compensar la latencia de la llamada.</p>
+              
+              <h4>MiniMongo</h4>
+              
+              <p style="display: none;">La colección del lado del cliente es un almacén de datos en memoria que ofrece una API tipo Mongo. La librería que se utiliza se llama “MiniMongo”, para indicar que es una versión más pequeña de Mongo que se ejecuta por completo en la memoria del navegador.</p>
+              
+              <h4>Paquete</h4>
+              
+              <p style="display: none;">Un paquete Meteor puede ser: código JavaScript que se ejecuta en el servidor, código JavaScript que se ejecuta en el cliente, instrucciones para procesar recursos (como SASS a CSS), o recursos que deben ser  procesados​​. <br> Un paquete es como una librería con superpoderes. Meteor incluye una gran cantidad de paquetes (<code>meteor list</code>). También existe <a href="http://atmosphere.meteor.com/">Atmosphere</a>, que es una colección de paquetes de terceros mantenida por la comunidad (<code>mrt add ...</code>).</p>
+              
+              <h4>Publicación</h4>
+              
+              <p style="display: none;">Una publicación es un conjunto de datos con nombre que se personaliza para cada usuario que se suscribe a ella. Se configuran en el servidor.</p>
+              
+              <h4>Servidor</h4>
+              
+              <p style="display: none;">El servidor Meteor es un servidor HTTP y DDP ejecutados vía Node.js. Se compone de todas las librerías y del código JavaScript del lado del servidor. Cuando se inicia el servidor, se conecta a una base de datos Mongo (que configura por si mismo en el primer arranque).</p>
+              
+              <h4>Sesión</h4>
+              
+              <p style="display: none;">La sesión en Meteor es una fuente de datos reactiva que usa tu aplicación para hacer un seguimiento del estado del usuario.</p>
+              
+              <h4>Suscripción</h4>
+              
+              <p style="display: none;">Una suscripción es una conexión a una publicación desde un cliente específico. La suscripción es el código que ejecuta el navegador y que utiliza para comunicarse con una publicación del servidor y que, además, mantiene los datos sincronizados.</p>
+              
+              <h4>Plantilla</h4>
+              
+              <p style="display: none;">Una plantilla es una forma de generar código HTML desde JavaScript. Por defecto, Meteor sólo soporta el sistema Spacebars, pero hay planes para incluir más.</p>
+              
+              <h4>Contexto de datos de una plantilla</h4>
+              
+              <p style="display: none;">Cuando se muestra un plantilla, lo que se representa es un objeto JavaScript que proporciona datos específicos para esta representación en particular. Por lo general, este tipo de objetos son, de tipo POJO (plain-old-JavaScript-objects), a menudo son documentos de una colección, aunque pueden ser más complejos e incluir funciones.</p>
+            </div>
+          </div>
+        </div>
+        <div class="post">
+          <div class="top-nav">
+            <div class="post-nav">
+              <a class="prev" href="http://es.discovermeteor.com/chapters/github/" title="Previous Post: Usando Git y GitHub">
+                «
+                Usando Git y GitHub
+              </a>
+              <a class="next" href="http://es.discovermeteor.com/chapters/publications-and-subscriptions/" title="next Post: Publicaciones y suscripciones">
+                Publicaciones y suscripciones
+                »
+              </a>
+            </div>
+          </div>
+          <div class="post-content">
+            <div class="chapter-heading">
+              <h2 class="chapter-title">Colecciones</h2>
+              <span class="chapter-number">4</span>
+            </div>
+            <input id="paragraphs" type="hidden" value="72">
+            <div class="chapter-summary note chapter">
+				<a href="#men" style="position:fixed;bottom:0px;left:0px;margin:2px;padding:2px 7px;background-color:rgba(64, 64, 64, 0.2);border-radius:50%;box-shadow:0px 0px 5px rgba(0, 0, 0, 0.4);">▲</a>
+              <h3 id="men">En este capítulo:</h3>
+              <ul>
+				  <li><a href="#men-ad">Almacenando datos.</a></li>
+				  <li><a href="#men-cys">Cliente y Servidor.</a></li>
+				  <li><a href="#men-ceelds">Colecciones en el lado del servidor.</a></li>
+				  <li><a href="#men-ceeldc">Colecciones en el lado del cliente.</a></li>
+				  <li><a href="#men-ccs">Comunicación cliente-servidor.</a></li>
+				  <li><a href="#men-rlbdd">Rellenando la base de datos.</a></li>
+				  <li><a href="#men-dd">Datos dinámicos.</a></li>
+				  <li><a href="#men-ccpys">Conectando colecciones: Publicaciones y suscripciones.</a></li>
+			  </ul>
+            </div>
+			
+			<p>En el Capítulo uno hablamos sobre la característica central de Meteor: la sincronización automática de datos entre cliente y servidor.</p>
+			
+			<p>En este capítulo miraremos más de cerca todo esto y observaremos cómo funciona la tecnología que lo hace posible, las <b>Colecciones</b> de Meteor.</p>
+			
+			<p>Una colección es una estructura de datos especial que se encarga de almacenar los datos de forma permanente, en una base de datos MongoDB en el servidor, y de la sincronización de datos en tiempo real con el navegador de cada usuario conectado.</p>
+			
+			<p>Queremos que nuestras publicaciones sean permanentes y los podamos compartir con otros usuarios, así que vamos a empezar creando una colección llamada <code>Publicaciones</code> para poder almacenarlos.</p>
+			
+			<p>Las colecciones son el eje central de cualquier aplicación, así que para asegurarnos de que se definen primero, las pondremos en el directorio <code>/lib</code>. Si todavía no lo has hecho, crea un directorio llamado <code>/colecciones</code> dentro de <code>/lib</code>, crea un archivo llamado <code>publicaciones.js</code> y añade lo siguiente:</p>
+            
+			<pre><span class="line">Publicaciones = <span class="kd">new</span> Mongo.Collection(<span class="s1">"publicaciones"</span>);</span></pre>
+            <div class="caption">/lib/colecciones/publicaciones.js</div>
+			
+			<div class="note">
+				<h3>Con var o sin var</h3>
+				
+				<p>En Meteor, la palabra clave <code><span class="kd">var</span></code> limita el alcance del objeto al archivo actual. Nosotros queremos que los Publicaciones estén disponibles para toda nuestra aplicación, por eso <b>no</b> usamos <code><span class="kd">var</span></code>.</p>
+			</div>
+            
+            <h3 id="men-ad">Almacenando datos</h3>
+			
+			Las aplicaciones web tienen a su disposición básicamente tres formas de almacenar datos, cada una desempeñando un rol diferente:
+			
+			<ul>
+				<li>La memoria del navegador: Cosas como las variables JavaScript son almacenadas en la memoria del navegador, lo que implica que no son <b>permanentes</b>: son datos locales a la pestaña del navegador y desaparecerán tan pronto como la cierres.</li>
+				
+				<li>El almacén del navegador: Los navegadores también pueden almacenar datos de forma permanente usando cookies o <a href="http://www.diveintohtml5.info/storage">Local Storage</a>. Aunque estos datos sean permanentes de una sesión a otra, son <code>locales</code> al usuario actual (pero disponible entre las pestañas) y no se puede compartir de forma sencilla con otros usuarios.</li>
+				
+				<li>La base de datos del servidor: el mejor lugar para almacenar datos de forma permanente para que puedan estar disponibles para más de un usuario es una base de datos (Siendo MongoDB la solución por defecto para las aplicaciones Meteor).</li>
+			</ul>
+			
+			Meteor hace uso de estas tres formas, y a veces sincroniza los datos de un lugar a otro (como veremos pronto). Dicho esto, la base de datos permanece como la fuente de datos <em>canónica</em> que contiene la copia maestra de los datos.
+            
+            <h3 id="men-cys">Cliente y Servidor</h3>
+			
+			<p>El código dentro de las carpetas que no sean <code>/client</code> ni <code>/server</code> se ejecutará en <b>ambos</b> contextos. Por lo que la colección <code>Publicaciones</code> estará disponible en el lado cliente y servidor. Sin embargo, lo que hace la colección en cada entorno es bastante diferente.</p>
+			
+			<p>En el servidor, la colección tiene la tarea de hablar con la base de datos MongoDB y leer y escribir cualquier cambio. En este sentido, se puede comparar con una librería de base de datos estándar.</p>
+			
+			<p>En el cliente sin embargo, la colección es una copia de un <b>subconjunto</b> de la colección canónica. La colección del lado del cliente se mantiene actualizada, de forma constante y (normalmente) trasparente con ese subconjunto de datos en tiempo real.</p>
+			
+			<div class="note">
+				<h3>Consola vs. Consola vs. Consola</h3>
+				
+				<p>En este capítulo hemos empezado a usar la <b>consola del navegador</b>, que no debemos confundir con la <b>terminal</b>, con la <b>Shell de Meteor</b> o con la <b>Shell de Mongo</b>. A continuación, explicamos brevemente cada una de ellas.</p>
+				
+				<h4>Terminal</h4>
+				
+				<figure class="screenshot "><img src="./Colecciones_files/4-1-1.png" alt="La Terminal"><figcaption>La Terminal</figcaption></figure>
+				
+				<ul>
+					<li>Se abre desde el sistema operativo.</li>
+					<li>Las llamadas a <code>console.log()</code> en el <b>lado del servidor</b> se muestran por aquí.</li>
+					<li>Prompt: <code>$</code>.</li>
+					<li>También se conoce como: Shell, Bash</li>
+				</ul>
+				
+				<h4>Consola del navegador</h4>
+				
+				<figure class="screenshot "><img src="./Colecciones_files/4-1-2.png" alt="La consola del navegador"><figcaption>La consola del navegador</figcaption></figure>
+				
+				<ul>
+					<li>Se abre desde dentro del navegador, ejecuta código JavaScript.</li>
+					<li>Las llamadas a <code>console.log()</code> en el <b>lado del cliente</b> se muestran por aquí.</li>
+					<li>Prompt: <code>></code>.</li>
+					<li>También se conoce como: JavaScript Console, DevTools Console</li>
+				</ul>
+				
+				<h4>La consola de Meteor</h4>
+				
+				<figure class="screenshot "><img src="./Colecciones_files/4-1-3.png" alt="La consola de Meteor"><figcaption>La consola de Meteor</figcaption></figure>
+				
+				<ul>
+					<li>Se abre desde la Terminal con <code><span class="kd">meteor</span> shell</code>.</li>
+					<li>Te da acceso directo al código de la parte del servidor de tu aplicación.</li>
+					<li>Prompt: <code>></code>.</li>
+				</ul>
+				
+				<h4>La consola de Mongo</h4>
+				
+				<figure class="screenshot "><img src="./Colecciones_files/4-1-4.png" alt="La consola de Mongo"><figcaption>La consola de Mongo</figcaption></figure>
+				
+				<ul>
+					<li>Se abre desde la Terminal con <code><span class="kd">meteor</span> mongo</code>.</li>
+					<li>Te da acceso directo a la base de datos de tu aplicación.</li>
+					<li>Prompt: <code>></code>.</li>
+					<li>También se conoce como: Mongo Console</li>
+				</ul>
+				
+				<p>Ten en cuenta que no hay que escribir el carácter prompt (<code>$</code> o <code>></code>) como parte de un comando. Y que puedes asumir como <b>salida</b>, todo lo que <b>no</b> empiece con el prompt.</p>
+			</div>
+            
+			<h3 id="men-ceelds">Colecciones en el lado del servidor</h3>
+			
+			<p>Recuarda: <em>Una <b>colección en MongoDB</b> equivale decir una <b>tabla en MySQL</b>.</em></p>
+			
+			<p>Volviendo al servidor, la colección actúa como una API de nuestra base de datos Mongo. En el código del lado del servidor, esto nos permite escribir comandos Mongo como <code>Publicaciones.insert()</code> o <code>Publicaciones.update()</code>, que harán cambios en la colección <code>publicaciones</code> almacenada dentro de Mongo.</p>
+			
+			<p>Para mirar el interior de la base de datos Mongo, abrimos una segunda ventana de terminal (mientras Meteor se está ejecutando en la primera), vamos al directorio de la aplicación y ejecutamos el comando <code><span class="kd">meteor</span> mongo</code> para iniciar una shell de Mongo, en la que podemos escribir los comandos estándares de Mongo (y como de costumbre, salir con <code>Ctrl + C</code>). Por ejemplo, vamos a insertar un nuevo post:</p>
+            
+			<p><em>NOTA: Para mayor comodidad recomiendo usar <a href="https://www.robomongo.org/">RoboMongo</a>.</em></p>
+			
+			<pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> mongo</span></pre>
+			<div class="caption">Terminal</div>
+			
+			<pre><span class="line"><span class="kd browser-prompt">&gt;</span> db.publicaciones.insert({<span class="s1">"titulo"</span>: <span class="s1">"Una nueva publicación"</span>});</span>
+<span class="line"><span class="kd browser-prompt">&gt;</span> db.publicaciones.find();</span><span class="line">{<span class="s1">"_id"</span>: ObjectId(<span class="s1">"•••"</span>), <span class="s1">"titulo"</span>: <span class="s1">"Una nueva publicación"</span>};</span></pre>
+            <div class="caption">Consola de mongo</div>
+            
+            <p>La sintaxis de Mongo es familiar, ya que utiliza una interfaz JavaScript. No vamos a hacer nungún tipo de manipulación de datos adicional en la consola de Mongo, pero podemos echar un vistazo de vez en cuando solo para ver lo que pasa por ahí.</p>
+			
+            <h3 id="men-ceeldc">Colecciones en el lado del cliente</h3>
+			
+			<p>Las colecciones son más interesantes en el lado del cliente. Cuando se declara <code>Publicaciones = <span class="kd">new</span> Mongo.Collection(<span class="s1">"publicaciones"</span>);</code> en el cliente, lo que se está creando es una <b>caché local dentro del navegador</b> de la colección real de Mongo. Cuando decimos que las colecciones del lado del cliente son una "caché", queremos decir que contiene un <b>subconjunto</b> de los datos, y ofrece un acceso muy <b>rápido</b>.</p>
+			
+			<p>Es importante entender este punto, ya que es fundamental para comprender la forma en la que funciona Meteor. En general, una colección del lado del cliente consiste en un subconjunto de todos los documentos almacenados en la colección de Mongo (por lo general, nunca querremos enviar <b>toda nuestra base de datos</b> al cliente).</p>
+			
+			<p>En segundo lugar, los documentos se almacenan <b>en la memoria del navegador</b>, lo que significa que el acceso a ellos es prácticamente instantáneo. Así que, cuando se llama, por ejemplo, a <code>Publicaciones.find()</code> desde el cliente, no hay caminos lentos hasta el servidor o a la base de datos, ya que los datos ya están precargados.</p>
+			
+			<div class="note">
+				<h3>Introduciendo MiniMongo</h3>
+				
+				<p>La implementación de Mongo en el lado del cliente de Meteor se llama MiniMongo.</p>
+			</div>
+            
+			<h3 id="men-ccs">Comunicación cliente-servidor</h3>
+			
+			<p>La parte más importante de todo esto es cómo se sincronizan los datos de la colección del cliente con la colección del mismo nombre (en nuestro caso <code>publicaciones</code>) del servidor.</p>
+			
+			<p>Mejor que explicarlo en detalle, vamos a verlo.</p>
+			
+			<p>Empezaremos abriendo dos ventanas del navegador, y accediendo a la consola en cada uno de ellos. A continuación, abrimos la consola de Mongo en la línea de comandos.</p>
+			
+			<p>En este punto, deberíamos ser capaces de encontrar el único documento que hemos creado antes desde la consola de Mongo (ten en cuenta que el <b>interfaz</b> de nuestra aplicación estará mostrando todavía los tres posts de prueba anteriores. Ignóralos por ahora).</p>
+			
+			<pre><span class="line"><span class="kd browser-prompt">&gt;</span> db.publicaciones.find();</span><span class="line">{<span class="s1">"_id"</span>: ObjectId(<span class="s1">"•••"</span>), <span class="s1">"titulo"</span>: <span class="s1">"Una nueva publicación"</span>}</span></pre>
+            <div class="caption">Consola de Mongo</div>
+			
+			<pre>
+<span class="line"><span class="kd browser-prompt">&gt;</span> Publicaciones.find();</span>
+<span class="line">{<span class="s1">"_id"</span>: ObjectId(<span class="s1">"•••"</span>), <span class="s1">"titulo"</span>: <span class="s1">"Una nueva publicación"</span>}</span>
+</pre>
+            <div class="caption">Consola del primer navegador</div>
+			
+<!--▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬-->
+			<!--LOOL: Por aquí.-->
+			<p style="width:100%px;margin:0px;padding:0px;border-top:50px red;border-style:double;background-color:gold;"></p>
+<!--▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬-->
+            
+			<p>Creemos mensaje nuevo en una de las ventanas del navegador ejecutando un insert:</p>
+            
+			<pre><span class="line"><span class="kd browser-prompt">&gt;</span> Mensajes.find().count();</span><span class="line nb">1</span><span class="line"><span class="kd browser-prompt">&gt;</span> Mensajes.insert({<span class="s1">"titulo"</span>: <span class="s1">"Un segundo mensaje"</span>});</span><span class="line s1">"•••"</span><span class="line"><span class="kd browser-prompt">&gt;</span> Mensajes.find().count();</span><span class="line nb">2</span></pre>
+            <div class="caption">Consola del primer navegador</div>
+            
+            <p>Como era de esperar, el post aparece en la colección local. Ahora vamos a comprobar Mongo:</p>
+			
+            <pre><span class="line"><span class="kd browser-prompt">&gt;</span> db.mensajes.find();</span><span class="line">{<span class="s1">"titulo"</span>: <span class="s1">"Un nuevo mensaje"</span>, <span class="na">_id</span>: ObjectId(<span class="s1">"•••"</span>)};</span><span class="line">{<span class="s1">"titulo"</span>: <span class="s1">"Un segundo mensaje"</span>, <span class="na">_id</span>: ObjectId(<span class="s1">"•••"</span>)};</span></pre>
+            <div class="caption">Consola de Mongo</div>
+            
+            <p>El post ha viajado hasta la base de datos sin escribir una sola línea de código (código interno) para enlazar nuestro cliente hasta el servidor.</p>
+            
+            <p>Escribamos esto en la consola del segundo navegador:</p>
+            
+			<pre><span class="line"><span class="kd browser-prompt">&gt;</span> Mensajes.find().count();</span><span class="line nb">2</span></pre>
+            <div class="caption">Consola del segundo navegador</div>
+            
+            <p>¡El post está ahí también! debido a que la colección del cliente ha informado de un nuevo mensaje y el servidor inmediatamente de pone a distribuirlo a los demás clientes conectados a la colección <code>mensajes</code>.</p>
+            
+            <h3 id="men-rlbdd">Rellenando la base de datos</h3>
+            
+            <p>Ahora con los datos estaticos que tenemos vamos a cambiarlos por los de la base de datos.</p>
+			
+			<p>Primero cerraremos nuestra aplicación con <code>Ctrl + C</code></p>
+			
+			<p>Segundo borraremos los datos de la base de datos con el siguiente comando:<p>
+            
+            <pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> reset</span></pre>
+            <div class="caption">Terminal</div>
+            
+            <p>Ahora que nuestra base de datos está bacía le indicaremos al servidor que si no encuentra datos en la colección <code>Mensajes</code> que nos cree unos mensajes predeterminados, para ello añade el nuevo fichero <code>/server/extras.js</code>:</p>
+			
+			<p>Copia la variable <code>mensajesDatos</code> de <code>/client/plantillas/mensajes/mensajes.lista.js</code> para mayor facilidad deido a que ya no nos sirve.</p>
+            
+			<p>Crea el siguiente archivo:</p>
+			
+			<pre><span class="line"><span class="kd">if</span>( Mensajes.find().count() === <span class="nb">0</span> ){</span><span class="line">  <span class="kd">var</span> mensajesDatos = [</span><span class="line">    {</span><span class="line">      <span class="s1">"titulo"</span>: <span class="s1">"Introducción a Telescópio"</span>,</span><span class="line">      <span class="s1">"url"</span>: <span class="s1">"http://www.sachagreif.com/introducing-telescope"</span></span><span class="line">    },{</span><span class="line">      <span class="s1">"titulo"</span>: <span class="s1">"Meteor"</span>,</span><span class="line">      <span class="s1">"url"</span>: <span class="s1">"http://www.meteor.com"</span></span><span class="line">    },{</span><span class="line">      <span class="s1">"titulo"</span>: <span class="s1">"El Libro de Meteor"</span>,</span><span class="line">      <span class="s1">"url"</span>: <span class="s1">"http://www.themeteorbook.com"</span></span><span class="line">    }</span><span class="line">  ];</span>
+<span class="line">  <span class="kd">for</span>( <span class="kd">var</span> <span class="ss">i</span> <span class="kd">in</span> mensajesDatos ){</span><span class="line">    Mensajes.insert(mensajesDatos[<span class="ss">i</span>]);</span><span class="line">  }</span><span class="line">}</span></pre>
+			<div class="caption">server/extras.js</div>
+            
+            <p>Ahora ejecutamos nuevamente el servidor con <code>meteor</code>, y estos tres posts se cargarán en la base de datos, siempre y cuando esté vacía.</p>
+            
+            <h3 id="men-dd">Datos dinámicos</h3>
+            
+            <p>Los datos que se muestran actualmente son los que hemos puesto en <code>mensajes_lista.js</code> por lo que los reemplazaremos con los que se encuentran en la mongo.</p>
+            
+            <p>Así es como debe quedar <code>mensajes_lista.js</code>:</p>
+            
+			<pre><span class="line">Template.mensajesLista.helpers({</span><span class="line added">  <span class="na">mensajes</span>: <span class="kd">function</span>(){</span><span class="line added">    <span class="kd">return</span> Mensajes.find();</span><span class="line added">  }</span><span class="line">});</span></pre>
+            <div class="caption">/client/plantillas/mensajes/mensajes_lista.js</div>
+            
+            <div class="lines-highlight" data-lines="2~4" data-class="added"></div>
+            
+            <p>No deberíamos notar diferencia, a menos que hayamos cambiado los datos, pero la grán diferencia es que los datos que se muestran son los que residen en la colección de MongoDB y no en un array:</p>
+            
+            <figure class="screenshot "><img src="./Colecciones_files/4-3.png" alt="Usando datos en vivo"><figcaption>Usando datos en vivo</figcaption></figure>
+            
+            <p>Ahora probaremos a insertar un mensaje por consola del navegador:</p>
+			
+            <pre><span class="line"><span class="kd browser-prompt">&gt;</span> Mensajes.insert({</span><span class="line">  <span class="s1">"titulo"</span>: <span class="s1">"Documentos Meteor"</span>,</span><span class="line">  <span class="s1">"autor"</span>: <span class="s1">"Tomas Colehombre"</span>,</span><span class="line">  <span class="s1">"url"</span>: <span class="s1">"http://docs.meteor.com"</span></span><span class="line">});</span></pre>
+			<div class="caption">Consola del navegador</div>
+            
+            <p>Vuelve a mirar el navegador – deberías ver esto:</p>
+            
+            <figure class="screenshot "><img src="./Colecciones_files/4-4.png" alt="Añadiendo un post desde la consola"><figcaption>Añadiendo un post desde la consola</figcaption></figure>
+            
+            <h3 id="men-ccpys">Conectando colecciones: Publicaciones y suscripciones</h3>
+            
+            <p>Vamos a deshabilitar el paquete <code>autopublish</code>.</p>
+            
+            <p>Abrimos una nueva ventana de terminal y escribimos:</p>
+			
+            <pre><span class="line"><span class="kd browser-prompt">></span> <span class="kd">meteor</span> remove autopublish</span></pre>
+            <div class="caption">Terminal</div>
+			
+            <p>Nuestros mensajes han desaparecido del navegador debido a que no están "auto publicadas".</p>
+            
+            <p>Vamos a publicar la colección <code>Mensajes</code> en su totalidad para tener nuestra aplicación como antes.</p>
+			
+			<p>Para ello primero creamos el fichero para las publicaciones:</p>
+			
+            <pre><span class="line">Meteor.publish(<span class="s1">"mensajes"</span>, <span class="kd">function</span>(){</span><span class="line">  <span class="kd">return</span> Mensajes.find();</span><span class="line">});</span></pre>
+            
+            <div class="caption">/server/publicaciones.js</div>
+            
+            <p>Ahora en el cliente, hay que <em>suscribirse</em> a la publicación del servidor. Añadimos la siguiente línea a <code>main.js</code>:</p>
+			
+            <pre>Meteor.subscribe(<span class="s1">"mensajes"</span>);</pre>
+            
+            <div class="caption">/client/main.js</div>
+            
+            <p>De nuevo aparecen los mensajes por el navegador.</p>
+          </div>
+          <div class="bottom-nav">
+            <div class="post-nav">
+              <a class="prev" href="http://es.discovermeteor.com/chapters/github/" title="Previous Post: Usando Git y GitHub">
+                «
+                Usando Git y GitHub
+              </a>
+              <a class="next" href="http://es.discovermeteor.com/chapters/publications-and-subscriptions/" title="next Post: Publicaciones y suscripciones">
+                Publicaciones y suscripciones
+                »
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="comments sidebar">
+          <a class="sidebar-toggle" data-disqus-identifier="collections_es" href="http://es.discovermeteor.com/chapters/collections/#disqus_thread">1 Comment</a>
+          <div class="sidebar-inner">
+            <div class="issues">
+              <a class="issue-link simple-button" href="https://github.com/DiscoverMeteor/Microscope/issues" target="_blank">Reporta un problema con el código</a>
+              <a class="issue-link simple-button" href="https://github.com/DiscoverMeteor/DiscoverMeteor_es/issues" target="_blank">Reporta un problema con el libro</a>
+              <hr>
+              <p>O, comenta el contenido aquí:</p>
+            </div>
+            <div id="disqus_thread"><iframe id="dsq-app7737" name="dsq-app7737" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Colecciones_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 830px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+            <script type="text/javascript">
+                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                var disqus_shortname = 'discovermeteores'; // required: replace example with your forum shortname
+                var disqus_identifier = 'collections_es';
+            
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+            
+                /* * * DON'T EDIT BELOW THIS LINE * * */
+                (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                }());
+            
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        © 2014 <a href="http://tom.thesnail.org/">Tom Coleman</a> y <a href="http://sachagreif.com/">Sacha Greif</a>
+      </div>
+    </footer>
+    <!-- %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"} -->
+    <script src="./Colecciones_files/moment.min.js.descarga"></script>
+    <script src="./Colecciones_files/es.js.descarga"></script>
+    <script src="./Colecciones_files/script.js.descarga"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-38246482-5', 'discovermeteor.com');
+      ga('send', 'pageview');
+    </script>
+    <input id="lang" type="hidden" value="es">
+  
+
+<iframe style="display: none;" src="./Colecciones_files/saved_resource(1).html"></iframe></body></html>
